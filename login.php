@@ -1,5 +1,5 @@
 <?php
-if ($_REQUEST['submit'] == 'true') {
+if ($_REQUEST['------'] == '------') {
     require '-----------' ; #file with database credentials
     
     #get salt
