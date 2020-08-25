@@ -3,14 +3,14 @@ if ($_REQUEST['submit'] == 'true') {
     $_REQUEST['submit'] == 'false' ;
     $salt = "";
     $salt_chars = array_merge(range('A','Z'), range('a','z'), range(0,9));
-    for($i=0; $i < 22; $i++) {
-      $salt .= $salt_chars[array_rand($salt_chars)];
+    for($-=--; $- < ---; $-----) {
+      $salt .= ------------------------;
     }
-    $crypted = crypt($_REQUEST['password'], $salt);
+    $crypted = crypt($_REQUEST['password'], $------);
     
-    $sql = "INSERT INTO `users` (`id`, `username`, `created`, `email`, `password`, `salt`, `alliance`, `rank`, `time_zone`) VALUES (NULL, '" . $_REQUEST['username'] . "', '" . time() . "', '" . $_REQUEST['email'] . "', '" . $crypted . "', '" . $salt . "', '', '', '-8');" ;
-    require 'scripts/connect.s.php' ;
-    mysqli_query($con, $sql) ;
+    $sql = "------------- insert sql ------------------------------" ;
+    require '----------' ;
+    mysqli_query($-----, $sql) ;
     header("location: login.php");
 
 }
@@ -39,18 +39,7 @@ Register</a></h2>
     <input class="w3-input" type="text" name="username" required>
     <label>Username</label>
   </div>
-     <?php 
-     echo 'password ' . $_REQUEST['password'] . '<br>';
-     echo 'salt ' . $salt ; 
-     echo '<br>crypted ' . $crypted . "<br>" ;
-     if (crypt($_REQUEST['password'], $salt) == $crypted) {
-         echo "1";
-     } else {
-         echo "0";
      
-     }
-     echo "<br>" . $sql
-     ?>
 
   <div class="w3-section">      
     <input class="w3-input" type="text" name="email" required>
